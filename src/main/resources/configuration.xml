@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="amazonStore001" class="com.example.spring.AmazonStore">
+        <property name="storeID" value="Amazon_0001"/>
+    </bean>
+
+    <bean id="flipkartStore001" class="com.example.spring.FlipkartStore">
+        <property name="storeID" value="Flipkart_0001"/>
+    </bean>
+
+    <bean id="miltonWaterBottle" class="com.example.spring.WaterBottle">
+        <property name="name" value="Milton 1L"></property>
+        <property name="price" value="200"></property>
+        <property name="store" ref="amazonStore001">
+<!--            <bean class="com.example.spring.AmazonStore">-->
+<!--                <property name="storeID" value="Amazon_0001" />-->
+<!--            </bean>-->
+        </property>
+    </bean>
+
+    <bean id="pigeonWaterBottle" class="com.example.spring.WaterBottle">
+        <constructor-arg name="name" value="Pigeon 1L"></constructor-arg>
+        <constructor-arg name="price" value="250"></constructor-arg>
+        <constructor-arg name="store" ref="amazonStore001"/>
+    </bean>
+
+    <bean id="onePlus7TMobile" class="com.example.spring.Mobile">
+        <property name="name" value="One Plus 7T"></property>
+        <property name="price" value="34000"></property>
+        <property name="store" ref="flipkartStore001">
+        </property>
+    </bean>
+
+<!--    <raj />-->
+<!--    <simaran />-->
+
+</beans>
