@@ -15,3 +15,5 @@ public class AnnotationMain {
 
 // auto wire only happens for bean, it is not possible for primitive types
 // type, name and qualifier
+
+// autowired, qualifier, value
